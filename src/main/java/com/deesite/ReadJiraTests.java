@@ -21,6 +21,8 @@ public class ReadJiraTests {
 			initializeDriver();
 			List<WebElement> testIds = driver.findElements(By.xpath("//table[@class='aui']/tbody/tr/td[3]/a"));
 			List<WebElement> tests = driver.findElements(By.xpath("//table[@class='aui']/tbody/tr/td[5]/a/span"));
+			// List<WebElement> nextButton =
+			// driver.findElements(By.xpath("//button[@aria-label='next']"));
 
 			testNames(testIds, tests);
 			testMethodNames(tests);
