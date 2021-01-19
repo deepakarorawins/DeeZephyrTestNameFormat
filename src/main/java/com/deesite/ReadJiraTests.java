@@ -79,6 +79,7 @@ public class ReadJiraTests {
 		List<String> testMethodNames = new ArrayList<>();
 		for (int i = 0; i < tests.size(); i++) {
 			String testTitle = tests.get(i).getAttribute("title");
+			testTitle = testTitle.replaceAll("\\p{Punct}",""); // To remove punctuation from a given string
 			testTitle = testTitle.replaceAll(".*[0]", " ").toLowerCase();
 			testTitle = testTitle.replaceAll("-", " ").toLowerCase();
 			testTitle = testTitle.replaceAll("\\s+", "_").toLowerCase();
